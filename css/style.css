@@ -1,3 +1,12 @@
+h1 {
+  font-family: fantasy;
+  font-size: 3em;
+  border-bottom: 2px solid rgb(228, 177, 12);
+  border-right: 2px solid rgb(228, 177, 12);
+  width: 400px;
+  text-align: center;
+}
+
 .navbar ul {
     display: flex;
     justify-content: center;
@@ -14,6 +23,38 @@
     text-decoration: none;
     color: #333;
 }
+
+.link1:hover a{
+    color: rgb(228, 177, 12);
+    border-top: 1px solid rgb(228, 177, 12);
+    border-bottom: 1px solid rgb(228, 177, 12);
+    transition: ease-in 0.5s;
+    transform: rotate(360deg);
+    text-transform: uppercase;
+}
+
+.link2:hover{
+  background: rgb(228, 177, 12);
+  border-radius: 5px;
+  transform: rotate(360deg);
+  transition: ease-in 0.5s;
+}
+
+.link2:hover a{
+  color: #fff;
+}
+
+.link3:hover {
+  background:  rgb(228, 177, 12);
+  border-radius: 5px;
+  transform: rotateX(360deg);
+  transition: ease-in-out 1.5s;
+}
+
+.link3:hover a{
+  color: #fff;
+}
+
 .btn {
     display: flex;
     justify-content: space-evenly;
@@ -30,6 +71,10 @@
     width: 150px;
     box-shadow: 0 9px #999;
     border-radius: 10px;
+}
+
+.btn-1:hover {
+  background: rgb(228, 177, 12);
 }
 
 .btn-1:active {
@@ -50,7 +95,7 @@
     
 }
 .btn-2:hover{
-    background: #333;
+    background: rgb(228, 177, 12);
     color: #fff;
     transition: ease-in 0.5s;
     
@@ -72,11 +117,106 @@ img {
     justify-content: center;
 }
 
-h1 {
-    font-family: fantasy;
-    font-size: 3em;
-    border-bottom: 2px solid pink;
-    border-right: 2px solid pink;
-    width: 400px;
+.shake:hover {
+    
+        /* Start the shake animation and make the animation last for 0.5 seconds */
+        animation: shake 0.8s;
+      
+        /* When the animation is finished, start again */
+        animation-iteration-count: infinite;
+      }
+      
+      @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+      }
+
+ 
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+ 
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 800px;
+    height: 500px;
+    max-width: 100%;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
     text-align: center;
-}
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
