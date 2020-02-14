@@ -1,12 +1,74 @@
-h1 {
-  font-family: fantasy;
-  font-size: 3em;
-  border-bottom: 2px solid rgb(228, 177, 12);
-  border-right: 2px solid rgb(228, 177, 12);
-  width: 400px;
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+h1 {
+  font-family: fantasy;
+  font-size: 2em;
+  width: 400px;
+  text-align: center;
+  margin: 0 50px;
+  color: rgb(228, 177, 12);
+  
+}
+
+.title {
+  transform: rotateX(360deg);
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  @keyframes slideup {
+    from {
+      transform: rotate(180deg);
+      position: absolute;
+      top: 100%;
+       left:0;
+    }
+  
+    to {
+      position: absolute;
+      top: -10%;
+       left:0;
+    }
+  }
+  
+.logo {
+  height: 80px;
+  width: 200px;
+  margin: 0px 160px;
+  animation-duration: 5s;
+  animation-name: slideup;
+}
+
+.logo:hover {
+  height: 80px;
+  width: 200px;
+  zoom: 100%;
+  transition: ease-in;
+  transform: rotateY(360deg);
+}
+
+.navbar {
+  height: 85px;
+  width: 100%;
+  background: #333;
+  
+  
+}
 .navbar ul {
     display: flex;
     justify-content: center;
@@ -21,7 +83,7 @@ h1 {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
 }
 
 .link1:hover a{
